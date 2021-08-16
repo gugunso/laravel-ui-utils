@@ -2,6 +2,7 @@
 
 namespace Gugunso\LaravelUiUtils\Http;
 
+use Gugunso\LaravelUiUtils\Http\Contract\IdentityHandler as IdentityHandlerInterface;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -10,7 +11,7 @@ use Illuminate\View\View;
  * RequestとViewから操作対象であるデータの識別子を検出する。
  * @package Gugunso\LaravelPresentations\Http\View
  */
-class IdentityHandler
+class IdentityHandler implements IdentityHandlerInterface
 {
     /** @var string $identifier 検出対象となる識別子名。デフォルトは "id" */
     private $identifier = 'id';
